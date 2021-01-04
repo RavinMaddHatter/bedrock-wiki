@@ -459,7 +459,9 @@ namespace:id: {
 - The "minecraft:entity_spawned" effect launches when the entity gets spawned by default. We will add the wild component group here, as well as randomize the baby or adult component groups. Adult has a higher weight, thus a higher chance to get chosen.
 - "minecraft:entity_born" is called in the minecraft:breedable component in the "tut:adult" component groups on the "baby" subject. Everything we need to do here is to add the baby component group.
 - "minecraft:agable_grow_up", on the other hand, has to remove the baby component group and add adult instead. As you hopefully remember, we called it in "minecraft:ageable" in "tut:baby" on the subject "self". It fires when the entity uses the "ageable" goal - grows up.
+- Events can also be called from the "/event" command. This can be useful for verifying the event. Example:  "/event entity @e minecraft:on_tame"
 - Lastly, "minecraft:on_tame" is called in the tameable component in "tut:wild". The event removes "wild" and adds "tamed".
+
 
 Events can also have a "sequence" array in them.
 
